@@ -48,7 +48,7 @@ forms.forEach((form) => {
     const message = form.querySelector("[data-form-message]");
     if (message) {
       message.textContent = "Заявка заполнена. Это демонстрация, данные не отправляются на сервер.";
-      message.classList.add("is-visible");
+      message.classList.add("order-form__message--visible");
     }
 
     form.reset();
