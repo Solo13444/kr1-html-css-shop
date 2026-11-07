@@ -199,7 +199,7 @@ textarea:focus-visible {
   font-size: 14px;
 }
 
-.site-logo__mark span {
+.site-logo__mark-accent {
   color: #cfe7f8;
 }
 
@@ -207,14 +207,21 @@ textarea:focus-visible {
   font-size: 17px;
 }
 
-.site-logo__word span {
+.site-logo__word-accent {
   color: var(--color-primary);
 }
 
 .site-nav__list {
   display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   align-items: center;
   gap: 16px;
+}
+
+.site-nav__item {
+  margin: 0;
 }
 
 .site-nav__link {
@@ -250,7 +257,7 @@ textarea:focus-visible {
   line-height: 1.2;
 }
 
-.hero__title span {
+.hero__title-accent {
   color: var(--color-primary);
 }
 
@@ -567,12 +574,16 @@ textarea:focus-visible {
   font-size: 12px;
 }
 
-.breadcrumbs a {
+.breadcrumbs__link {
   color: var(--color-primary);
 }
 
-.breadcrumbs [aria-current="page"] {
+.breadcrumbs__current {
   color: var(--color-text);
+}
+
+.breadcrumbs__separator {
+  color: var(--color-text-light);
 }
 
 .page-intro__title {
@@ -604,6 +615,9 @@ textarea:focus-visible {
 }
 
 .catalog-filters {
+  position: sticky;
+  top: 16px;
+  z-index: 5;
   grid-area: filters;
   padding: 16px;
   border: 1px solid var(--color-border);
@@ -618,7 +632,7 @@ textarea:focus-visible {
   margin-bottom: 15px;
 }
 
-.catalog-filters__header h2 {
+.catalog-filters__title {
   margin-bottom: 0;
   font-size: 17px;
 }
@@ -633,7 +647,7 @@ textarea:focus-visible {
   border-bottom: 1px solid var(--color-border);
 }
 
-.catalog-filters__group h3 {
+.catalog-filters__group-title {
   margin-bottom: 8px;
   font-size: 14px;
 }
@@ -644,7 +658,7 @@ textarea:focus-visible {
   gap: 5px;
 }
 
-.category-list a {
+.category-list__link {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -652,7 +666,7 @@ textarea:focus-visible {
   font-size: 13px;
 }
 
-.category-list a span:last-child {
+.category-list__count {
   margin-left: auto;
   color: var(--color-text-light);
   font-size: 12px;
@@ -712,7 +726,7 @@ textarea:focus-visible {
   margin-bottom: 17px;
 }
 
-.catalog-products__header h2 {
+.catalog-products__title {
   margin-bottom: 0;
   font-size: 23px;
 }
@@ -745,7 +759,7 @@ textarea:focus-visible {
   background: #eef3f7;
 }
 
-.product-detail__visual img {
+.product-detail__image {
   width: 130px;
   height: 130px;
 }
@@ -785,7 +799,7 @@ textarea:focus-visible {
   margin: 18px 0;
 }
 
-.product-detail__quickfacts div {
+.product-detail__fact {
   padding: 12px;
   background: var(--color-section);
 }
@@ -860,6 +874,10 @@ textarea:focus-visible {
 }
 
 /* 10. Форма заявки */
+.order-form {
+  width: 100%;
+}
+
 .order-layout {
   display: grid;
   grid-template-columns: 0.75fr 1.25fr;
@@ -880,13 +898,13 @@ textarea:focus-visible {
   font-size: 23px;
 }
 
-.order-aside h2 {
+.order-aside__title {
   margin-bottom: 10px;
   color: #ffffff;
   font-size: 23px;
 }
 
-.order-aside p:not(.eyebrow) {
+.order-aside__text {
   color: #e3eef7;
   font-size: 14px;
 }
@@ -911,7 +929,7 @@ textarea:focus-visible {
   margin-bottom: 18px;
 }
 
-.order-form-card__heading h2 {
+.order-form-card__title {
   margin-bottom: 0;
   font-size: 21px;
 }
@@ -921,24 +939,30 @@ textarea:focus-visible {
   font-size: 12px;
 }
 
-.form-grid {
+.order-form__field {
+  min-width: 0;
+}
+
+.order-form__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
 }
 
-.form-field--wide {
+.order-form__field--wide {
   grid-column: 1 / -1;
 }
 
-.form-field label:not(.checkbox-field) {
+.order-form__label {
   display: block;
   margin-bottom: 5px;
   font-size: 13px;
   font-weight: 600;
 }
 
-.form-control {
+.order-form__input,
+.order-form__select,
+.order-form__textarea {
   display: block;
   width: 100%;
   min-height: 38px;
@@ -949,44 +973,50 @@ textarea:focus-visible {
   background: #ffffff;
 }
 
-.form-control:hover {
+.order-form__input:hover,
+.order-form__select:hover,
+.order-form__textarea:hover {
   border-color: var(--color-primary);
 }
 
-.form-control:focus {
+.order-form__input:focus-visible,
+.order-form__select:focus-visible,
+.order-form__textarea:focus-visible {
   border-color: var(--color-primary);
 }
 
-.form-control[aria-invalid="true"] {
+.order-form__input[aria-invalid="true"],
+.order-form__select[aria-invalid="true"],
+.order-form__textarea[aria-invalid="true"] {
   border-color: var(--color-error);
   background: #fff7f7;
 }
 
-.form-control--textarea {
+.order-form__textarea {
   min-height: 90px;
   resize: vertical;
 }
 
-.checkbox-field {
+.order-form__checkbox {
   display: flex;
   align-items: flex-start;
   gap: 8px;
   font-size: 13px;
 }
 
-.checkbox-field input {
+.order-form__checkbox input {
   margin-top: 4px;
 }
 
-.checkbox-field input[aria-invalid="true"] {
+.order-form__checkbox input[aria-invalid="true"] {
   outline: 1px solid var(--color-error);
 }
 
-.form-submit {
+.order-form__submit {
   margin-top: 16px;
 }
 
-.form-message {
+.order-form__message {
   display: none;
   margin-top: 12px;
   padding: 10px;
@@ -995,7 +1025,7 @@ textarea:focus-visible {
   border: 1px solid #b8dec7;
 }
 
-.form-message.is-visible {
+.order-form__message--visible {
   display: block;
 }
 
@@ -1023,12 +1053,12 @@ textarea:focus-visible {
   font-size: 24px;
 }
 
-.contacts-card h2 {
+.contacts-card__title {
   margin-bottom: 9px;
   font-size: 23px;
 }
 
-.contacts-card p:not(.eyebrow) {
+.contacts-card__text {
   color: var(--color-text-light);
   font-size: 14px;
 }
@@ -1049,12 +1079,12 @@ textarea:focus-visible {
   font-weight: 700;
 }
 
-.contacts-info h3 {
+.contacts-info__title {
   margin-bottom: 5px;
   font-size: 16px;
 }
 
-.contacts-info p {
+.contacts-info__text {
   margin-bottom: 6px;
   color: var(--color-text-light);
   font-size: 13px;
@@ -1108,6 +1138,8 @@ textarea:focus-visible {
 
 /* 13. Модальное окно */
 .order-dialog {
+  position: fixed;
+  z-index: 1000;
   width: 620px;
   max-width: calc(100% - 30px);
   max-height: 90vh;
