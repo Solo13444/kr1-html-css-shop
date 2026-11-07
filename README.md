@@ -93,3 +93,4 @@ git push -u origin feature/flex-grid-navigation
 
 - ФИО: Облов Арнольд Александрович
 - Группа: ЭФБО-14-25
+qweryt
