@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебный интернет-магазин с демонстрационным каталогом аккаунтов Instagram, TikTok, Telegram, Snapchat и WhatsApp.">
+  <title>Главная | SocialMarket</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-logo" href="index.html" aria-label="SocialMarket — главная страница">
+      <span class="site-logo__mark" aria-hidden="true">S<span>M</span></span>
+      <span class="site-logo__word">social<span>market</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link site-nav__link--active" aria-current="page" href="index.html">Главная</a></li>
+        <li><a class="site-nav__link " href="catalog.html">Каталог</a></li>
+        <li><a class="site-nav__link " href="product.html">Товар</a></li>
+        <li><a class="site-nav__link " href="order.html">Заявка</a></li>
+        <li><a class="site-nav__link " href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+    <a class="button button--small button--outline site-header__cta" href="order.html">Оставить заявку <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container hero__layout">
+      <div class="hero__content">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> КАТАЛОГ АККАУНТОВ СОЦСЕТЕЙ</p>
+        <h1 class="hero__title">Социальные аккаунты <span>в одном каталоге.</span></h1>
+        <p class="hero__text">Каталог демонстрационных карточек Instagram, TikTok, Telegram, Snapchat и WhatsApp. Посмотрите характеристики и оставьте заявку.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="catalog.html">Открыть каталог <span aria-hidden="true">↗</span></a>
+          <a class="button button--secondary" href="order.html">Оформить заявку</a>
+        </div>
+        <div class="hero__note"><span class="hero__note-icon" aria-hidden="true">✓</span><span>Пять платформ · Единая структура каталога</span></div>
+      </div>
+      <div class="hero-art" aria-label="Платформы из каталога">
+        <div class="hero-art__orbit hero-art__orbit--one"></div>
+        <div class="hero-art__orbit hero-art__orbit--two"></div>
+        <div class="hero-art__card hero-art__card--main">
+          <span class="hero-art__label">SOCIAL / MARKET</span>
+          <div class="hero-art__icons">
+            <img src="images/instagram.svg" alt="Instagram" width="62" height="62">
+            <img src="images/tiktok.svg" alt="TikTok" width="62" height="62">
+            <img src="images/telegram.svg" alt="Telegram" width="62" height="62">
+            <img src="images/snapchat.svg" alt="Snapchat" width="62" height="62">
+            <img src="images/whatsapp.svg" alt="WhatsApp" width="62" height="62">
+          </div>
+          <strong>Выберите платформу</strong>
+          <span class="hero-art__small">Подробности — в карточках каталога</span>
+        </div>
+        <div class="hero-art__floating hero-art__floating--top"><span class="hero-art__floating-mark">05</span><span>платформ</span></div>
+        <div class="hero-art__floating hero-art__floating--bottom"><span class="hero-art__floating-dot"></span><span>Каталог и заявка</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="advantages">
+    <div class="container">
+      <div class="section-heading section-heading--split">
+        <div><p class="eyebrow">ПРЕИМУЩЕСТВА</p><h2 class="section-heading__title">Всё по пунктам</h2></div>
+        <p class="section-heading__text">Структура магазина остаётся простой: каталог, характеристики товара и форма заявки.</p>
+      </div>
+      <div class="advantages-grid">
+        <article class="advantage-card"><span class="advantage-card__number">01</span><h3>Понятный каталог</h3><p>Карточки сгруппированы по платформам и показывают краткое описание и цену-пример.</p></article>
+        <article class="advantage-card"><span class="advantage-card__number">02</span><h3>Характеристики</h3><p>У карточки товара есть описание и таблица с основными характеристиками.</p></article>
+        <article class="advantage-card"><span class="advantage-card__number">03</span><h3>Форма заявки</h3><p>Можно открыть форму из карточки товара или перейти на отдельную страницу заявки.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="popular">
+    <div class="container">
+      <div class="section-heading section-heading--split">
+        <div><p class="eyebrow">ПОПУЛЯРНЫЕ ТОВАРЫ</p><h2 class="section-heading__title">Подборка каталога</h2></div>
+        <a class="text-link" href="catalog.html">Весь каталог <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="products-grid products-grid--home">
+        <article class="product-card" id="instagram-creator" data-platform="instagram">
+  <div class="product-card__visual product-card__visual--instagram">
+    <span class="product-card__badge">Популярное</span>
+    <img class="product-card__icon" src="images/instagram.svg" alt="Иконка Instagram" width="76" height="76">
+    <span class="product-card__platform">Instagram</span>
+  </div>
+  <div class="product-card__body">
+    <p class="product-card__eyebrow">ДЕМО-КАРТОЧКА</p>
+    <h3 class="product-card__title">Instagram · Creator Start</h3>
+    <p class="product-card__description">Визуальный профиль для тематических публикаций.</p>
+    <div class="product-card__facts">
+      <span>Аудитория</span><strong>12,4 тыс.</strong>
+    </div>
+    <div class="product-card__bottom">
+      <div class="product-card__price"><span>Цена-пример</span><strong>2 900 ₽</strong></div>
+      <div class="product-card__actions">
+        <a class="button button--small button--outline" href="product.html?item=instagram-creator">Подробнее</a>
+        <button class="button button--small button--primary" type="button" data-open-dialog data-product="Instagram · Creator Start">Заказать</button>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="product-card" id="tiktok-creator" data-platform="tiktok">
+  <div class="product-card__visual product-card__visual--tiktok">
+    <span class="product-card__badge product-card__badge--muted">Каталог</span>
+    <img class="product-card__icon" src="images/tiktok.svg" alt="Иконка TikTok" width="76" height="76">
+    <span class="product-card__platform">TikTok</span>
+  </div>
+  <div class="product-card__body">
+    <p class="product-card__eyebrow">ДЕМО-КАРТОЧКА</p>
+    <h3 class="product-card__title">TikTok · Video Start</h3>
+    <p class="product-card__description">Профиль для публикации коротких видео.</p>
+    <div class="product-card__facts">
+      <span>Аудитория</span><strong>8,2 тыс.</strong>
+    </div>
+    <div class="product-card__bottom">
+      <div class="product-card__price"><span>Цена-пример</span><strong>1 800 ₽</strong></div>
+      <div class="product-card__actions">
+        <a class="button button--small button--outline" href="product.html?item=tiktok-creator">Подробнее</a>
+        <button class="button button--small button--primary" type="button" data-open-dialog data-product="TikTok · Video Start">Заказать</button>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="product-card" id="telegram-channel" data-platform="telegram">
+  <div class="product-card__visual product-card__visual--telegram">
+    <span class="product-card__badge">Новинка</span>
+    <img class="product-card__icon" src="images/telegram.svg" alt="Иконка Telegram" width="76" height="76">
+    <span class="product-card__platform">Telegram</span>
+  </div>
+  <div class="product-card__body">
+    <p class="product-card__eyebrow">ДЕМО-КАРТОЧКА</p>
+    <h3 class="product-card__title">Telegram · Channel Start</h3>
+    <p class="product-card__description">Канал для тематических публикаций и новостей.</p>
+    <div class="product-card__facts">
+      <span>Аудитория</span><strong>4,6 тыс.</strong>
+    </div>
+    <div class="product-card__bottom">
+      <div class="product-card__price"><span>Цена-пример</span><strong>2 400 ₽</strong></div>
+      <div class="product-card__actions">
+        <a class="button button--small button--outline" href="product.html?item=telegram-channel">Подробнее</a>
+        <button class="button button--small button--primary" type="button" data-open-dialog data-product="Telegram · Channel Start">Заказать</button>
+      </div>
+    </div>
+  </div>
+</article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-band" id="contacts">
+    <div class="container contact-band__inner">
+      <div><p class="eyebrow eyebrow--light">ЕСТЬ ВОПРОС?</p><h2>Оставьте заявку</h2><p>Перейдите к форме, чтобы указать контакты и тему обращения.</p></div>
+      <a class="button button--light" href="order.html">Перейти к форме <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__main">
+    <div class="site-footer__brand">
+      <a class="site-logo site-logo--footer" href="index.html" aria-label="SocialMarket — главная страница">
+        <span class="site-logo__mark" aria-hidden="true">S<span>M</span></span>
+        <span class="site-logo__word">social<span>market</span></span>
+      </a>
+      <p>Учебный интернет-магазин аккаунтов социальных сетей.</p>
+    </div>
+    <div class="site-footer__links">
+      <span class="site-footer__label">Разделы</span>
+      <a href="catalog.html">Каталог</a>
+      <a href="product.html">Карточка товара</a>
+      <a href="order.html">Оформление заявки</a>
+    </div>
+    <div class="site-footer__links">
+      <span class="site-footer__label">На главной</span>
+      <a href="index.html#advantages">Преимущества</a>
+      <a href="index.html#popular">Популярные товары</a>
+      <a href="index.html#contacts">Контакты</a>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <span>© 2026 SocialMarket · Учебный проект</span>
+    <span>Карточки и цены представлены как примеры. Форма не отправляет данные на сервер.</span>
+  </div>
+</footer>
+<dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+  <div class="order-dialog__header">
+    <div>
+      <p class="eyebrow">БЫСТРАЯ ЗАЯВКА</p>
+      <h2 class="order-dialog__title" id="order-dialog-title">Оставить заявку</h2>
+    </div>
+    <button class="icon-button" type="button" data-close-dialog aria-label="Закрыть окно">×</button>
+  </div>
+  <p class="order-dialog__description">Заполните форму — появится подтверждение в демонстрационном режиме.</p>
+  <form class="contact-form" data-request-form action="#" method="post">
+  <input type="hidden" name="product" value="" data-selected-product>
+  <div class="form-grid">
+    <div class="form-field">
+      <label for="home-modal-name">Имя</label>
+      <input class="form-control" id="home-modal-name" name="name" type="text" placeholder="Как к вам обращаться?" minlength="2" maxlength="60" autocomplete="name" required>
+    </div>
+    <div class="form-field">
+      <label for="home-modal-email">E-mail</label>
+      <input class="form-control" id="home-modal-email" name="email" type="email" placeholder="example@mail.ru" autocomplete="email" required>
+    </div>
+    <div class="form-field">
+      <label for="home-modal-phone">Телефон</label>
+      <input class="form-control" id="home-modal-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" pattern="[+0-9() -]{7,20}" title="Введите номер: цифры, пробелы, скобки, дефис и знак +." autocomplete="tel" required>
+    </div>
+    <div class="form-field">
+      <label for="home-modal-date">Дата связи</label>
+      <input class="form-control" id="home-modal-date" name="date" type="date" required>
+    </div>
+    <div class="form-field form-field--wide">
+      <label for="home-modal-topic">Тема заявки</label>
+      <select class="form-control" id="home-modal-topic" name="topic" required>
+        <option value="" selected disabled>Выберите тему</option>
+        <option value="account">Вопрос по аккаунту</option>
+        <option value="catalog">Вопрос по каталогу</option>
+        <option value="other">Другая тема</option>
+      </select>
+    </div>
+    <div class="form-field form-field--wide">
+      <label for="home-modal-comment">Комментарий</label>
+      <textarea class="form-control form-control--textarea" id="home-modal-comment" name="comment" placeholder="Уточните ваш вопрос" minlength="4" maxlength="500" rows="4" required></textarea>
+    </div>
+    <div class="form-field form-field--wide">
+      <label class="checkbox-field" for="home-modal-consent">
+        <input id="home-modal-consent" name="consent" type="checkbox" required>
+        <span>Согласен(на) на обработку данных для учебной демонстрации.</span>
+      </label>
+    </div>
+  </div>
+  <button class="button button--primary form-submit" type="submit">Отправить заявку <span aria-hidden="true">↗</span></button>
+  <p class="form-message" data-form-message role="status" aria-live="polite"></p>
+</form>
+</dialog>
+<script src="js/main.js"></script>
+</body>
+</html>
