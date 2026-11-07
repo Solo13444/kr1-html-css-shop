@@ -1300,4 +1300,23 @@ textarea:focus-visible {
     transform: none;
   }
 }
+/* Синий фон всей карточки при наведении или фокусе */
+.product-card:hover,
+.product-card:focus-within {
+    background-color: #dceeff;
+    border-color: #1769aa;
+    box-shadow: 0 7px 18px rgba(23, 105, 170, 0.2);
+    transform: translateY(-3px);
+}
 
+/* Синий фон основной части карточки */
+.product-card:hover .product-card__body,
+.product-card:focus-within .product-card__body {
+    background-color: #dceeff;
+}
+
+/* Синий фон верхней части карточки */
+.product-card:hover .product-card__visual,
+.product-card:focus-within .product-card__visual {
+    background-color: #bfdbf2;
+}
