@@ -1197,3 +1197,107 @@ textarea:focus-visible {
   background: var(--color-section);
 }
 
+/* 13. Выделение частей сайта и карточек при наведении и фокусе */
+.hero,
+.section,
+.contact-band {
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Подсветка крупных разделов сайта при наведении мыши */
+.hero:hover,
+.section:hover {
+  background-color: var(--color-primary-light);
+}
+
+.contact-band:hover {
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+/* Подсветка раздела, когда пользователь переходит к его ссылке или кнопке с клавиатуры */
+.hero:focus-within,
+.section:focus-within,
+.contact-band:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+/* Подсветка информационной карточки в первом экране */
+.hero-art__card {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hero-art__card:hover,
+.hero-art__card:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 6px 18px rgba(23, 105, 170, 0.12);
+  transform: translateY(-3px);
+}
+
+/* Подсветка преимуществ */
+.advantage-card {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.advantage-card:hover,
+.advantage-card:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 5px 14px rgba(23, 105, 170, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Подсветка целой карточки товара */
+.product-card {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 7px 18px rgba(23, 105, 170, 0.14);
+  transform: translateY(-3px);
+}
+
+/* Лёгкое увеличение логотипа внутри карточки при наведении на товар */
+.product-card__icon {
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover .product-card__icon,
+.product-card:focus-within .product-card__icon {
+  transform: scale(1.08);
+}
+
+/* Небольшое выделение цветной верхней части карточки товара */
+.product-card__visual {
+  transition: filter 0.2s ease;
+}
+
+.product-card:hover .product-card__visual,
+.product-card:focus-within .product-card__visual {
+  filter: saturate(1.15);
+}
+
+/* Убираем движение для пользователей, отключивших анимацию в настройках системы */
+@media (prefers-reduced-motion: reduce) {
+  .hero-art__card,
+  .advantage-card,
+  .product-card,
+  .product-card__icon,
+  .product-card__visual,
+  .hero,
+  .section,
+  .contact-band {
+    transition: none;
+  }
+
+  .hero-art__card:hover,
+  .hero-art__card:focus-within,
+  .advantage-card:hover,
+  .advantage-card:focus-within,
+  .product-card:hover,
+  .product-card:focus-within {
+    transform: none;
+  }
+}
+
